@@ -14,6 +14,5 @@ class FundingRound
         @@all
     end
 
-    
 
 end

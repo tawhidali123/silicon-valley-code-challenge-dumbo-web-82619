@@ -68,10 +68,8 @@ class Startup
     end
 
     def big_investors
-        # VentureCapitalist.tres_commas_club.map{
-        #     |capitalist|
-        #     capitalist
-        # }
+
+        
 
         # helper_fund.map {
         #     |each|
@@ -85,12 +83,13 @@ class Startup
         #     |each|
         #     each.venture_capitalist == let
         # }
-        self.investors.select{
-            |each|
-            VentureCapitalist.tres_commas_club
-        }
-        
 
+        # thing = self.investors
+        # VentureCapitalist.tres_commas_club.find{
+        #     |i|
+        #     FundingRound.all
+        # }
+      
 
     end
 

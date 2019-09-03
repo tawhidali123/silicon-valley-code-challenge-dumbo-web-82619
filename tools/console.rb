@@ -8,12 +8,12 @@ end
 # so they will be available to test and play around with in your console
 
 
-billy = VentureCapitalist.new("aiebek", 1000000000000000000)
+billy = VentureCapitalist.new("billy", 1000000000000000000)
 franky = VentureCapitalist.new("frank", 100000000000)
 broke = VentureCapitalist.new("timmy", 345)
 
-startup1 = Startup.new("Firstname", "ali", "HBO")
-startup2 = Startup.new("second", "bob", "wtf!!!!!")
+startup1 = Startup.new("google", "ali", "HBO")
+startup2 = Startup.new("facebook", "bob", "wtf!!!!!")
 
 
 first_round = FundingRound.new(startup1, billy, "series B", 10000)

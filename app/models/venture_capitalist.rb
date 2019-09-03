@@ -20,4 +20,35 @@ class VentureCapitalist
         }
     end
 
+    def offer_contract(startup,type_of_investment, amount_invested)
+        FundingRound.new(startup, self, type_of_investment, amount_invested)
+    end
+
+    def helper_fund
+        FundingRound.all.select{
+            |fund|
+            fund.venture_capitalist == self
+        }
+    end
+
+    def funding_rounds
+        self.helper_fund
+    end
+
+    def portfolio
+        helper_fund.map{
+            |fund|
+            fund.startup.name
+        }
+    end
+
+    def biggest_investment
+        holder = helper_fund.find{
+            |each|
+            each.investment
+        }
+    end
+
+
+
 end
