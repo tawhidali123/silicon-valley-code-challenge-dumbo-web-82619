@@ -7,6 +7,7 @@ class Startup
         @name = name
         @founder = founder
         @domain = domain
+        # @venture = venture
         @@all << self
     end
 
@@ -38,26 +39,32 @@ class Startup
         FundingRound.new(self, venture_cap, type, investment)
     end
 
-    def num_funding_rounds
-        var = FundingRound.all.select{
+    def helper_fund
+        FundingRound.all.select{
             |each_fund|
             each_fund.startup == self
         }
-        return var.count
+    end
+
+    def num_funding_rounds
+       helper = helper_fund
+       helper.count
     end
 
     def total_funds
-        # sum = 0
-        # var = FundingRound.all.select{
-        #     |each_fund|
-        #     each_fund.startup == self
-        # }
+        fund = 0
+        helper_fund.each{
+            |amount|
+            fund += amount.investment
+        }
+        fund
+    end
 
-        # var.each{
-        #     |fund|
-        #     fund.investment += sum 
-        # }
-        # return sum
+    def investors
+        helper_fund.map {
+            |each_round|
+            each_round.venture_capitalist.name
+        }
     end
 
 end
