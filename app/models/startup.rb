@@ -67,4 +67,31 @@ class Startup
         }
     end
 
+    def big_investors
+        # VentureCapitalist.tres_commas_club.map{
+        #     |capitalist|
+        #     capitalist
+        # }
+
+        # helper_fund.map {
+        #     |each|
+        #     if VentureCapitalist.tres_commas_club == each.venture_capitalist
+        #         each
+        #     end
+        # }
+
+        # let = VentureCapitalist.tres_commas_club
+        # helper_fund.select {
+        #     |each|
+        #     each.venture_capitalist == let
+        # }
+        self.investors.select{
+            |each|
+            VentureCapitalist.tres_commas_club
+        }
+        
+
+
+    end
+
 end
