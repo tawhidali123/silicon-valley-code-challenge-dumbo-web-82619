@@ -68,7 +68,20 @@ class Startup
     end
 
     def big_investors
+        holder = VentureCapitalist.tres_commas_club
+        our_investors = self.investors
+        number = 0
+        array = []
 
+        holder.each{
+            |i|
+            if i.name == our_investors[number]
+                array.push(i.name)
+                number += 1
+            end
+        }
+        
+        return array
         
 
         # helper_fund.map {

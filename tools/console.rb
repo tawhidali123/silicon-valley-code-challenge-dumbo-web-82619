@@ -11,6 +11,7 @@ end
 billy = VentureCapitalist.new("billy", 1000000000000000000)
 franky = VentureCapitalist.new("frank", 100000000000)
 broke = VentureCapitalist.new("timmy", 345)
+rich = VentureCapitalist.new("tom", 678922000000000)
 
 startup1 = Startup.new("google", "ali", "HBO")
 startup2 = Startup.new("facebook", "bob", "wtf!!!!!")
@@ -19,6 +20,7 @@ startup2 = Startup.new("facebook", "bob", "wtf!!!!!")
 first_round = FundingRound.new(startup1, billy, "series B", 10000)
 second_round = FundingRound.new(startup2, franky, "angel", 1000)
 third_round = FundingRound.new(startup1, broke, "angel", 3456)
+fourth_round = FundingRound.new(startup1, rich, "angel", 5678903)
 
 
 # start1 = Startup.new("Jans", "twitter.cos")
